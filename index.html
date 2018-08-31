@@ -15,6 +15,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         * {
           box-sizing: border-box;
@@ -60,8 +63,8 @@
         .main {
             margin-left: 200px; /* Same as the width of the sidenav */
             padding: 60px;
-            
-            
+
+
         }
         body {
             font-family: 'Cutive Mono';
@@ -98,6 +101,27 @@
         <!-- Page Content -->
         <div class="main">
 
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            <div class="col-sm-4">
+              <h3>Column 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+          </div>
+        </div>
+
+
                 <p id="poem" style="height:300px;"></p>
                 <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>-->
@@ -107,7 +131,7 @@
         <!-- /#page-content-wrapper -->
 
 
-  
+
     <!-- Menu Toggle Script
     <script>
     $("#menu-toggle").click(function(e) {
