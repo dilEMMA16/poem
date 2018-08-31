@@ -69,6 +69,12 @@
             color: #dbd8ce;
             display: block;
             background-image: url(imgs/backgroundpoem.png);
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
 </head>
@@ -92,7 +98,7 @@
         <!-- Page Content -->
         <div class="main">
 
-                <p id="poem" style="height:300px; z-index:6;"></p>
+                <p id="poem" style="height:300px;"></p>
                 <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>-->
                 <button type="button" onclick="writeHaiku()">dame una poema</button>
