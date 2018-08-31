@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,25 +23,44 @@
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: #111;
+            background-color: #fff;
             overflow-x: hidden;
             padding-top: 20px;
+            border-right: 2px solid #f2eded;
         }
 
-        .sidenav a {
-            padding: 6px 6px 6px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
+            .sidenav a {
+                padding: 6px 6px 6px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #dbd8ce;
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    filter: brightness(110%);
+                }
+
+        button {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+            border: 2px solid #f2eded;
+            color: #dbd8ce;
         }
 
-        .sidenav a:hover {
-            color: #f1f1f1;
+        button:hover{
+            filter: brightness(96%);
         }
 
         .main {
             margin-left: 200px; /* Same as the width of the sidenav */
+            padding: 60px;
+            
+            
+        }
+        body {
+            
         }
     </style>
 </head>
@@ -51,8 +70,8 @@
 
 
         <!-- Sidebar -->
-        <div class="sidebarnav" style="background-color:#3b704a;color:white;">
-                    <a href="#">create</a>
+        <div class="sidenav">
+                    <a href="index.html">create</a>
 
                     <a href="#">words</a>
 
@@ -65,19 +84,16 @@
         <!-- Page Content -->
         <div class="main">
 
-                <p id=poem></p>
+                <p id="poem" style="height:300px; z-index:6;"></p>
                 <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>-->
-                <button type="button" onclick=writeHaiku()>dame una poema</button>
+                <button type="button" onclick="writeHaiku()">dame una poema</button>
 
         </div>
         <!-- /#page-content-wrapper -->
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  
     <!-- Menu Toggle Script
     <script>
     $("#menu-toggle").click(function(e) {

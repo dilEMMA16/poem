@@ -1,4 +1,5 @@
 function writeHaiku() {
+    console.log("goes into method.");
   //two dimensional arrays to store word objects sorted by number of syllables
   let oneSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
   let twoSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
@@ -3695,9 +3696,9 @@ function writeHaiku() {
                 //return getOneSyllableNounLinkingSecondPlural(oneSyllable);
                 break;
             case 2:
-                let indexToGet1 = Utilities.getRandomInteger(0, twoSyllable[8].length - 1);
+                let indexToGet0 = Utilities.getRandomInteger(0, twoSyllable[8].length - 1);
                 //console.log(typeof twoSyllable[8][indexToGet]);
-                return twoSyllable[8][indexToGet1]; //returns a word object
+                return twoSyllable[8][indexToGet0]; //returns a word object
                 //return getTwoSyllableNounLinkingSecondPlural(twoSyllable);
                 break;
             case 3:
