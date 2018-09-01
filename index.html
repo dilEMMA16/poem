@@ -10,6 +10,8 @@
 
     <title>poetree</title>
 
+    <link rel="icon" href="imgs/favicon.ico" type="image/icon" sizes="16x16">
+
     <!-- javascript for poem functionality -->
     <script type="text/javascript" src="testscript.js"></script>
 
@@ -19,6 +21,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+    .active {
+      border-right: 20px solid #cdcbc1 !important;
+      border-left: 20px solid #cdcbc1 !important;
+    }
 
         .sidenav {
             height: 100%;
@@ -99,7 +105,7 @@
         <div class="sidenav">
                     <img src="imgs/logo2.png" style="width:100%;padding:20px;">
                     <br><br>
-                    <a href="index.html">create</a><br>
+                    <a href="index.html" class="active">create</a><br>
 
                     <a href="words.html">words</a><br>
 
