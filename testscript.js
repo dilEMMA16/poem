@@ -24,7 +24,7 @@ function writeHaiku() {
   // let haiku = "<br><br>" + firstLine + "<br>" + secondLine + "<br>" + thirdLine + "<br><br>"
   //piece together poem
   //document.getElementById("poem").innerHTML = haiku
-  document.getElementById("poem").innerHTML = firstLine + "<br>" + secondLine + "<br>" + thirdLine;
+  document.getElementById("poem").innerHTML = firstLine + "<br><br>" + secondLine + "<br><br>" + thirdLine;
 }
 
 
