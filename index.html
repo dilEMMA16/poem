@@ -24,17 +24,18 @@
             height: 100%;
             width: 200px;
             position: fixed;
-            z-index: 1;
+            z-index: 3;
             top: 0;
             left: 0;
             background-color: #fff;
             overflow-x: hidden;
             padding-top: 20px;
             border-right: 2px solid #cdcbc1;
+            text-align: center;
         }
 
             .sidenav a {
-                padding: 6px 6px 6px 32px;
+                padding: 6px 22px;
                 text-decoration: none;
                 font-size: 25px;
                 color: #cdcbc1;
@@ -63,6 +64,7 @@
             margin-left: 200px; /* Same as the width of the sidenav */
             padding: 0px;
             height: 100%;
+            z-index: 2;
         }
 
         body {
@@ -79,6 +81,7 @@
           bottom: 0px;
           background-image: url("imgs/backgroundpoemflowers.png");
           height: 200px;
+          z-index: 1;
           background-position:top;
           background-repeat: repeat-x;
           background-size: contain;
@@ -94,6 +97,8 @@
 
         <!-- Sidebar -->
         <div class="sidenav">
+                    <img src="imgs/logo2.png" style="width:100%;padding:20px;">
+                    <br><br>
                     <a href="index.html">create</a><br>
 
                     <a href="#">words</a><br>
@@ -116,7 +121,7 @@
               <p id="poem" style="height:200px;"></p><br><br><br>
               <button type="button" onclick="writeHaiku()">dame una poema</button>
             </div>
-            <div class="col-sm-4" style="padding-left: 0px;  padding-right: 0px;">
+            <div class="col-sm-4" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
               <img src="imgs/starsright.png" class="img-responsive" style="">
             </div>
           </div>
