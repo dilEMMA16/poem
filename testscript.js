@@ -3800,14 +3800,14 @@ function writeHaiku() {
             ["some,nounPlural", ["4"]],
             ["wordOfGroupingAOrAn,of,nounPlural", ["2,1", "1,2"]],
             ["adjective,nounSingular", ["1,4", "4,1", "2,3", "3,2"]],
-            ["any,any", ["1,4", "4,1", "2,3", "3,2"]],
+            //["any,any", ["1,4", "4,1", "2,3", "3,2"]],
             ["adjective,nounPlural", ["1,4", "4,1", "2,3", "3,2"]],
             ["nounPlural,verbPlural", ["1,4", "4,1", "2,3", "3,2"]],
             ["verbSingular,adverb", ["1,4", "4,1", "2,3", "3,2"]],
             ["verbPlural,adverb", ["1,4", "4,1", "2,3", "3,2"]],
             ["adjective,nounSingular,verbSingular", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
             ["adjective,nounPlural,verbPlural", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
-            ["any,any,any", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
+            //["any,any,any", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
             ["nounPlural,nounPlural,nounPlural", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
             ["nounSingular,nounSingular,nounSingular", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
             ["any", ["5"]],
@@ -3821,7 +3821,7 @@ function writeHaiku() {
     function getTemplatesForSevenSyllables(){
       let templatesForSevenSyllables = [
             ["adjective,nounSingular", ["2,5", "5,2", "3,4", "4,3"]],
-            ["any,any", ["2,5", "5,2", "3,4", "4,3"]],
+
             ["adjective,nounPlural", ["2,5", "5,2", "3,4", "4,3"]],
             ["his,nounSingular,verbSingular", ["5,1", "1,5", "2,4", "4,2", "3,3"]],
             ["her,nounSingular,verbSingular", ["5,1", "1,5", "2,4", "4,2", "3,3"]],
@@ -3881,7 +3881,7 @@ function writeHaiku() {
             ["wordOfGroupingAOrAn,of,nounPlural,verbPlural", ["1,1,3", "1,3,1", "3,1,1", "2,2,1", "1,2,2", "2,1,2"]],
             ["nounPlural,nounLinkingSecondPlural,nounPlural", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]],
             ["nounSingular,nounLinkingSecondSingular,nounSingular", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]],
-            ["any,any,any", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]],
+            //["any,any,any", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]],
             ["nounSingular,nounSingular,nounSingular", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]],
             ["nounPlural,nounPlural,nounPlural", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]]
 
