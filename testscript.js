@@ -760,8 +760,6 @@ function writeHaiku() {
           //1 syllables
           word = {writtenWord:"globe",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
-          word = {writtenWord:"chunk",type:"nounSingular",syllables:1,style:"all"};
-          oneSyllable[3].push(word);
           word = {writtenWord:"oil",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"glaze",type:"nounSingular",syllables:1,style:"all"};
@@ -1922,8 +1920,6 @@ function writeHaiku() {
           word = {writtenWord:"rues",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"globes",type:"nounPlural",syllables:1,style:"all"};
-          oneSyllable[4].push(word);
-          word = {writtenWord:"chunks",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"oils",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
