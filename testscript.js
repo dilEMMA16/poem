@@ -1,4 +1,4 @@
-function writeHaiku() {
+function writeHaiku(isMobile) {
     console.log("goes into method.");
   //two dimensional arrays to store word objects sorted by number of syllables
   let oneSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
@@ -24,7 +24,12 @@ function writeHaiku() {
   // let haiku = "<br><br>" + firstLine + "<br>" + secondLine + "<br>" + thirdLine + "<br><br>"
   //piece together poem
   //document.getElementById("poem").innerHTML = haiku
-  document.getElementById("poem").innerHTML = firstLine + "<br><br>" + secondLine + "<br><br>" + thirdLine;
+  if (isMobile) {
+    document.getElementById("poemmobile").innerHTML = firstLine + "<br><br>" + secondLine + "<br><br>" + thirdLine;
+  }
+  else {
+    document.getElementById("poem").innerHTML = firstLine + "<br><br>" + secondLine + "<br><br>" + thirdLine;
+  }
 }
 
 
@@ -3450,7 +3455,7 @@ function writeHaiku() {
           twoSyllable[6].push(word);
           word = {writtenWord:"valley",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
-          word = {writtenWord:"vineyar",type:"wordOfGrouping",syllables:2,style:"all"};
+          word = {writtenWord:"vineyard",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
           word = {writtenWord:"brewery",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
@@ -3473,6 +3478,10 @@ function writeHaiku() {
           word = {writtenWord:"teaspoon",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
           word = {writtenWord:"island",type:"wordOfGrouping",syllables:2,style:"all"};
+          twoSyllable[6].push(word);
+          word = {writtenWord:"language",type:"wordOfGrouping",syllables:2,style:"all"};
+          twoSyllable[6].push(word);
+          word = {writtenWord:"lingo",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
           //3 syllables
           word = {writtenWord:"aromas",type:"wordOfGrouping",syllables:3,style:"all"};
@@ -3833,7 +3842,8 @@ function writeHaiku() {
       let templatesForFiveSyllables = [
             ["nounSingularAOrAn", ["4"]],
             ["the,nounSingular", ["4"]],
-            ["some,nounPlural", ["4"]],
+            ["wordOfGrouping,of,nounPlural", ["3,1","1,3","2,2"]],
+            ["wordOfGrouping,of,nounSingular", ["3,1","1,3","2,2"]],
             ["wordOfGroupingAOrAn,of,nounPlural", ["2,1", "1,2"]],
             ["adjective,nounSingular", ["1,4", "4,1", "2,3", "3,2"]],
             //["any,any", ["1,4", "4,1", "2,3", "3,2"]],
