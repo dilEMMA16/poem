@@ -701,7 +701,7 @@ function writeHaiku(isMobile) {
           twoSyllable[2].push(word);
           word = {writtenWord:"coolly",type:"adverb",syllables:2,style:"all"};
           twoSyllable[2].push(word);
-          word = {writtenWord:"bodly",type:"adverb",syllables:2,style:"all"};
+          word = {writtenWord:"boldly",type:"adverb",syllables:2,style:"all"};
           twoSyllable[2].push(word);
           //3 syllables
           word = {writtenWord:"gracefully",type:"adverb",syllables:3,style:"all"};
