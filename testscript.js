@@ -162,6 +162,8 @@ function writeHaiku(isMobile) {
           twoSyllable[0].push(word);
           word = {writtenWord:"toggles",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
+          word = {writtenWord:"schmoozes",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
           word = {writtenWord:"babbles",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
           word = {writtenWord:"huddles",type:"verbSingular",syllables:2,style:"all"};
@@ -368,6 +370,8 @@ function writeHaiku(isMobile) {
           word = {writtenWord:"clasp",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"grasp",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
+          word = {writtenWord:"schmooze",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"graze",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
@@ -2857,14 +2861,15 @@ function writeHaiku(isMobile) {
           oneSyllable[5].push(word);
           word = {writtenWord:"rose",type:"adjective",syllables:1,style:"all"};
           oneSyllable[5].push(word);
-          word = {writtenWord:"rosebud",type:"adjective",syllables:1,style:"all"};
-          oneSyllable[5].push(word);
           word = {writtenWord:"chrome",type:"adjective",syllables:1,style:"all"};
           oneSyllable[5].push(word);
-          word = {writtenWord:"buttercream",type:"adjective",syllables:1,style:"all"};
-          oneSyllable[5].push(word);
+
           //2 syllables
           word = {writtenWord:"chiseled",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"woozy",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"rosebud",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
           word = {writtenWord:"peachy",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
@@ -3094,6 +3099,8 @@ function writeHaiku(isMobile) {
           word = {writtenWord:"cabana",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"saturday",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"buttercream",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"imported",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
