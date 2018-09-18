@@ -7,6 +7,7 @@ function writeHaiku(isMobile) {
   let fourSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
   let fiveSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping,nounLinkingSecondSingular, nounLinkingSecondPlural
 
+  let wordsUsed = [];
 
   //populate with words
   populateDictionary(oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
@@ -30,6 +31,205 @@ function writeHaiku(isMobile) {
   else {
     document.getElementById("poem").innerHTML = firstLine + "<br><br>" + secondLine + "<br><br>" + thirdLine;
   }
+
+  wordsUsed = [];
+}
+
+
+
+
+function getRandomPoem(isMobile) {
+  //two dimensional arrays to store word objects sorted by number of syllables
+  let oneSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
+  let twoSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
+  let threeSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
+  let fourSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping, nounLinkingSecondSingular, nounLinkingSecondPlural
+  let fiveSyllable = [[], [], [], [], [], [], [], [],[]]; //singular verbs, plural verbs, adverbs, singular nouns, plural nouns, adjectives, word of grouping,nounLinkingSecondSingular, nounLinkingSecondPlural
+
+
+  //populate with words
+  populateDictionary(oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
+
+  //decide how many lines (1 - 8)
+  let numberOfLines = Utilities.getRandomInteger(0, 8);
+  let poem = "";
+  //for number of lines
+  for (int i = 0; i <numberOfLines; i++) {
+
+    //choose a template
+    let templateLibrary = getAllTemplates();
+    let numberOfTemplateToUse = Utilities.getRandomInteger(0, templateLibrary.length - 1);
+
+    let template = templateLibrary[numberOfTemplateToUse];
+    //first index of template = ordering of words
+    let firstIndex = template[0];
+    //split up first index by commas = now an array
+    let parsedFirstIndex = firstIndex.split(',');
+    let line = "";
+    let indexToAccessInParsedSyllableCombo = 0;
+    for (let k = 0; k < parsedFirstIndex.length; k++) {
+        //grab next word type from parsed first index
+        let nextWord = parsedFirstIndex[k];
+        let syllablesToUse = Utilities.getRandomInteger(1, 5);
+        //check if the word is any of the keywords
+        switch (nextWord) {
+
+            case "verbSingular":
+
+                let wordToAdd1 = getSingularVerb(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd1 = wordBank.getSingularVerb(syllables1).getWrittenWord();
+                //add word to line
+                line = line + wordToAdd1 + " ";
+                break;
+
+            case "verbPlural":
+
+                let wordToAdd2 = getPluralVerb(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd2 = wordBank.getPluralVerb(syllables2).getWrittenWord();
+                //add word to line
+                line = line + wordToAdd2 + " ";
+                break;
+            case "nounSingular":
+
+                let wordToAdd3 = getSingularNoun(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd3 = wordBank.getSingularNoun(syllables3).getWrittenWord();
+                //add word to line
+                line = line + wordToAdd3 + " ";
+                break;
+            case "nounSingularAOrAn":
+
+                let wordToAdd4 = getSingularNoun(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd4 = wordBank.getSingularNoun(syllables4).getWrittenWord();
+                //check for correct a or an
+                let aOrAn4 = Utilities.checkIfWordNeedsAOrAn(wordToAdd4);
+                //add word to line
+                line = line + aOrAn4 + " " + wordToAdd4 + " ";
+                break;
+            case "nounPlural":
+
+                let wordToAdd5 = getPluralNoun(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd5 = wordBank.getPluralNoun(syllables5).getWrittenWord();
+
+                //add word to line
+                line = line + wordToAdd5 + " ";
+                break;
+            case "adjective":
+
+                let wordToAdd6 = getAdjective(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd6 = wordBank.getAdjective(syllables6).getWrittenWord();
+                //add word to line
+                line = line + wordToAdd6 + " ";
+                break;
+            case "adjectiveAOrAn":
+
+                let wordToAdd7 = getAdjective(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+              //  let wordToAdd7 = wordBank.getAdjective(syllables7).getWrittenWord();
+                //check for correct a or an
+                let aOrAn7 = Utilities.checkIfWordNeedsAOrAn(wordToAdd7);
+
+                //add word to line
+                line = line + aOrAn7 + " " + wordToAdd7 + " ";
+                break;
+            case "adverb":
+
+                let wordToAdd8 = getAdverb(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd8 = wordBank.getAdverb(syllables8).getWrittenWord();
+                //add word to line
+                line = line + wordToAdd8 + " ";
+                break;
+            case "wordOfGrouping":
+
+                let wordToAdd9 = getWordOfGrouping(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                //let wordToAdd9 = wordBank.getAdverb(syllables8).getWrittenWord();
+                //add word to line
+                line = line + wordToAdd9 + " ";
+                break;
+            case "wordOfGroupingAOrAn":
+
+               let wordToAdd10 = getWordOfGrouping(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+              //  let wordToAdd10 = wordBank.getWordOfGrouping(syllables10).getWrittenWord();
+                //check for correct a or an
+                let aOrAn10 = Utilities.checkIfWordNeedsAOrAn(wordToAdd10);
+
+                //add word to line
+                line = line + aOrAn10 + " " + wordToAdd10 + " ";
+                break;
+            case "nounLinkingSecondSingular":
+
+               let wordToAdd12 = getNounLinkingSecondSingular(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+              //  let wordToAdd10 = wordBank.getWordOfGrouping(syllables10).getWrittenWord();
+
+                //add word to line
+                line = line + " " + wordToAdd12 + " ";
+                break;
+            case "nounLinkingSecondPlural":
+
+               let wordToAdd13 = getNounLinkingSecondPlural(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+              //  let wordToAdd10 = wordBank.getWordOfGrouping(syllables10).getWrittenWord();
+
+                //add word to line
+                line = line + " " + wordToAdd13 + " ";
+                break;
+            case "any":
+
+                let wordToAdd11;
+                let randomWordClassChoice = Utilities.getRandomInteger(0, 4);
+                switch (randomWordClassChoice) {
+                    case 0:
+                        //wordToAdd11 = wordBank.getSingularVerb(syllables11).writtenWord; = MAKECONSISTENT
+                        wordToAdd11 = getSingularVerb(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                        break;
+                    case 1:
+                        //wordToAdd11 = wordBank.getPluralVerb(syllables11).writtenWord;
+                        wordToAdd11 = getPluralVerb(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                        break;
+                    case 2:
+                      //  wordToAdd11 = wordBank.getSingularNoun(syllables11).writtenWord;
+                        wordToAdd11 = getSingularNoun(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                        break;
+                    case 3:
+                        //wordToAdd11 = wordBank.getPluralNoun(syllables11).writtenWord;
+                        wordToAdd11 = getPluralNoun(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                        break;
+                    case 4:
+                        //wordToAdd11 = wordBank.getAdjective(syllables11).writtenWord;
+                        wordToAdd11 = getAdjective(syllablesToUse,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                        break;
+                }
+                //add word to line
+                line = line + wordToAdd11 + " ";
+                break;
+            default: //add word automatically to the line, do not increment index to access in parsed syllable combo since number of syllables for filler words already accounted for
+                //add word to line
+                line = line + nextWord + " ";
+                break;
+        }
+
+    }
+
+    poem = poem + line + "<br><br>" ;
+
+
+  }
+
+      //grab words as needed
+        //based on type...
+        //choose what number of syllables
+        //get random from correct place in arrays
+      //concatenate onto return value
+
+  // let haiku = "<br><br>" + firstLine + "<br>" + secondLine + "<br>" + thirdLine + "<br><br>"
+  //piece together poem
+  //document.getElementById("poem").innerHTML = haiku
+  if (isMobile) {
+    document.getElementById("poemmobile").innerHTML = poem;
+  }
+  else {
+    document.getElementById("poem").innerHTML = poem;
+  }
+
+
+
 }
 
 
@@ -3734,6 +3934,13 @@ function writeHaiku(isMobile) {
                     //let test1 = getSingularVerb(syllables1);
                     //grab singular verb written version
                     let wordToAdd1 = getSingularVerb(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+
+                    while (wordsUsed.includes(wordToAdd1))
+                    {
+                      wordToAdd1 = getSingularVerb(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd1)
+
                     //let wordToAdd1 = wordBank.getSingularVerb(syllables1).getWrittenWord();
                     //add word to line
                     line = line + wordToAdd1 + " ";
@@ -3746,6 +3953,11 @@ function writeHaiku(isMobile) {
                     //let test2 = wordBank.getPluralVerb(syllables2);
                     //grab plural verb written version
                     let wordToAdd2 = getPluralVerb(syllables2,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd2))
+                    {
+                      wordToAdd2 = getPluralVerb(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd2)
                     //let wordToAdd2 = wordBank.getPluralVerb(syllables2).getWrittenWord();
                     //add word to line
                     line = line + wordToAdd2 + " ";
@@ -3757,6 +3969,11 @@ function writeHaiku(isMobile) {
                     //let test3 = wordBank.getSingularNoun(syllables3);
                     //grab written version
                     let wordToAdd3 = getSingularNoun(syllables3,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd3))
+                    {
+                      wordToAdd3 = getSingularNoun(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd3)
                     //let wordToAdd3 = wordBank.getSingularNoun(syllables3).getWrittenWord();
                     //add word to line
                     line = line + wordToAdd3 + " ";
@@ -3768,6 +3985,11 @@ function writeHaiku(isMobile) {
                     //let test4 = wordBank.getSingularNoun(syllables4);
                     //grab written version
                     let wordToAdd4 = getSingularNoun(syllables4,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd4))
+                    {
+                      wordToAdd4 = getSingularNoun(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd4)
                     //let wordToAdd4 = wordBank.getSingularNoun(syllables4).getWrittenWord();
                     //check for correct a or an
                     let aOrAn4 = Utilities.checkIfWordNeedsAOrAn(wordToAdd4);
@@ -3781,6 +4003,11 @@ function writeHaiku(isMobile) {
                     //let test5 = wordBank.getPluralNoun(syllables5);
                     //grab written version
                     let wordToAdd5 = getPluralNoun(syllables5,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd5))
+                    {
+                      wordToAdd5 = getPluralNoun(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd5)
                     //let wordToAdd5 = wordBank.getPluralNoun(syllables5).getWrittenWord();
 
                     //add word to line
@@ -3793,6 +4020,11 @@ function writeHaiku(isMobile) {
                     //let test6 = wordBank.getAdjective(syllables6);
                     //grab written version
                     let wordToAdd6 = getAdjective(syllables6,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd6))
+                    {
+                      wordToAdd6 = getAdjective(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd6)
                     //let wordToAdd6 = wordBank.getAdjective(syllables6).getWrittenWord();
                     //add word to line
                     line = line + wordToAdd6 + " ";
@@ -3804,6 +4036,11 @@ function writeHaiku(isMobile) {
                     //let test7 = wordBank.getAdjective(syllables7);
                     //grab written version
                     let wordToAdd7 = getAdjective(syllables7,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd7))
+                    {
+                      wordToAdd7 = getAdjective(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd7)
                   //  let wordToAdd7 = wordBank.getAdjective(syllables7).getWrittenWord();
                     //check for correct a or an
                     let aOrAn7 = Utilities.checkIfWordNeedsAOrAn(wordToAdd7);
@@ -3818,6 +4055,11 @@ function writeHaiku(isMobile) {
                     ///let test8 =  wordBank.getAdverb(syllables8);
                     //grab written version
                     let wordToAdd8 = getAdverb(syllables8,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd8))
+                    {
+                      wordToAdd8 = getAdverb(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd8)
                     //let wordToAdd8 = wordBank.getAdverb(syllables8).getWrittenWord();
                     //add word to line
                     line = line + wordToAdd8 + " ";
@@ -3829,6 +4071,11 @@ function writeHaiku(isMobile) {
                     //let test9 = wordBank.getWordOfGrouping(syllables9);
                     //grab written version
                     let wordToAdd9 = getWordOfGrouping(syllables9,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    while (wordsUsed.includes(wordToAdd9))
+                    {
+                      wordToAdd9 = getWordOfGrouping(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                    }
+                    wordsUsed.push(wordToAdd9)
                     //let wordToAdd9 = wordBank.getAdverb(syllables8).getWrittenWord();
                     //add word to line
                     line = line + wordToAdd9 + " ";
@@ -3840,6 +4087,11 @@ function writeHaiku(isMobile) {
                     //let test10 = wordBank.getWordOfGrouping(syllables10);
                     //grab written version
                    let wordToAdd10 = getWordOfGrouping(syllables10,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                   while (wordsUsed.includes(wordToAdd10))
+                   {
+                     wordToAdd10 = getWordOfGrouping(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                   }
+                   wordsUsed.push(wordToAdd10)
                   //  let wordToAdd10 = wordBank.getWordOfGrouping(syllables10).getWrittenWord();
                     //check for correct a or an
                     let aOrAn10 = Utilities.checkIfWordNeedsAOrAn(wordToAdd10);
@@ -3854,6 +4106,11 @@ function writeHaiku(isMobile) {
                     //let test10 = wordBank.getWordOfGrouping(syllables10);
                     //grab written version
                    let wordToAdd12 = getNounLinkingSecondSingular(syllables12,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                   while (wordsUsed.includes(wordToAdd12))
+                   {
+                     wordToAdd12 = getNounLinkingSecondSingular(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                   }
+                   wordsUsed.push(wordToAdd12)
                   //  let wordToAdd10 = wordBank.getWordOfGrouping(syllables10).getWrittenWord();
 
                     //add word to line
@@ -3866,6 +4123,11 @@ function writeHaiku(isMobile) {
                     //let test10 = wordBank.getWordOfGrouping(syllables10);
                     //grab written version
                    let wordToAdd13 = getNounLinkingSecondPlural(syllables13,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                   while (wordsUsed.includes(wordToAdd13))
+                   {
+                     wordToAdd13 = getNounLinkingSecondPlural(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                   }
+                   wordsUsed.push(wordToAdd13)
                   //  let wordToAdd10 = wordBank.getWordOfGrouping(syllables10).getWrittenWord();
 
                     //add word to line
@@ -3881,22 +4143,47 @@ function writeHaiku(isMobile) {
                         case 0:
                             //wordToAdd11 = wordBank.getSingularVerb(syllables11).writtenWord; = MAKECONSISTENT
                             wordToAdd11 = getSingularVerb(syllables11,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            while (wordsUsed.includes(wordToAdd11))
+                            {
+                              wordToAdd11 = getSingularVerb(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            }
+                            wordsUsed.push(wordToAdd11)
                             break;
                         case 1:
                             //wordToAdd11 = wordBank.getPluralVerb(syllables11).writtenWord;
                             wordToAdd11 = getPluralVerb(syllables11,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            while (wordsUsed.includes(wordToAdd11))
+                            {
+                              wordToAdd11 = getPluralVerb(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            }
+                            wordsUsed.push(wordToAdd11)
                             break;
                         case 2:
                           //  wordToAdd11 = wordBank.getSingularNoun(syllables11).writtenWord;
                             wordToAdd11 = getSingularNoun(syllables11,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            while (wordsUsed.includes(wordToAdd11))
+                            {
+                              wordToAdd11 = getSingularNoun(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            }
+                            wordsUsed.push(wordToAdd11)
                             break;
                         case 3:
                             //wordToAdd11 = wordBank.getPluralNoun(syllables11).writtenWord;
                             wordToAdd11 = getPluralNoun(syllables11,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            while (wordsUsed.includes(wordToAdd11))
+                            {
+                              wordToAdd11 = getPluralNoun(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            }
+                            wordsUsed.push(wordToAdd11)
                             break;
                         case 4:
                             //wordToAdd11 = wordBank.getAdjective(syllables11).writtenWord;
                             wordToAdd11 = getAdjective(syllables11,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            while (wordsUsed.includes(wordToAdd11))
+                            {
+                              wordToAdd11 = getAdjective(syllables1,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable).writtenWord;
+                            }
+                            wordsUsed.push(wordToAdd11)
                             break;
                     }
                     //add word to line
@@ -4026,6 +4313,95 @@ function writeHaiku(isMobile) {
 
       ];
       return templatesForSevenSyllables;
+    }
+
+
+    function getAllTemplates() {
+      let templates = [
+            ["nounSingularAOrAn"],
+            ["the,nounSingular"],
+            ["wordOfGrouping,of,nounPlural"],
+            ["wordOfGrouping,of,nounSingular"],
+            ["wordOfGroupingAOrAn,of,nounPlural"],
+            ["adjective,nounSingular"],
+            //["any,any", ["1,4", "4,1", "2,3", "3,2"]],
+            ["adjective,nounPlural"],
+            ["nounPlural,verbPlural"],
+            ["verbSingular,adverb"],
+            ["verbPlural,adverb"],
+            ["adjective,nounSingular,verbSingular"],
+            ["adjective,nounPlural,verbPlural"],
+            //["any,any,any", ["1,2,2", "2,2,1", "1,1,3", "2,1,2", "1,3,1", "3,1,1"]],
+            ["nounPlural,nounPlural,and,nounPlural"],
+            ["nounSingular,nounSingular,and,nounSingular"],
+            ["any"],
+            ["nounPlural,nounLinkingSecondPlural,nounPlural"],
+            ["some,nounPlural"],
+            ["nounSingular,nounLinkingSecondSingular,nounSingular"]
+            ["adjective,nounSingular"],
+            ["his,nounSingular,verbSingular"],
+            ["her,nounSingular,verbSingular"],
+            ["their,nounSingular,verbSingular"],
+            ["our,nounSingular,verbSingular"],
+            ["my,nounSingular,verbSingular"],
+            ["your,nounSingular,verbSingular"],
+            ["its,nounSingular,verbSingular"],
+            ["his,nounPlural,verbPlural"],
+            ["her,nounPlural,verbPlural"],
+            ["their,nounPlural,verbPlural"],
+            ["our,nounPlural,verbPlural"],
+            ["my,nounPlural,verbPlural"],
+            ["your,nounPlural,verbPlural"],
+            ["its,nounPlural,verbPlural"],
+            ["his,adjective,nounPlural"],
+            ["her,adjective,nounPlural"],
+            ["their,adjective,nounPlural"],
+            ["our,adjective,nounPlural"],
+            ["my,adjective,nounPlural"],
+            ["your,adjective,nounPlural"],
+            ["its,adjective,nounPlural"],
+            ["his,adjective,nounSingular"],
+            ["her,adjective,nounSingular"],
+            ["their,adjective,nounSingular"],
+            ["our,adjective,nounSingular"],
+            ["my,adjective,nounSingular"],
+            ["your,adjective,nounSingular"],
+            ["its,adjective,nounSingular"],
+            ["his,nounSingular,verbSingular,adverb"],
+            ["her,nounSingular,verbSingular,adverb"],
+            ["their,nounSingular,verbSingular,adverb"],
+            ["our,nounSingular,verbSingular,adverb"],
+            ["my,nounSingular,verbSingular,adverb"],
+            ["your,nounSingular,verbSingular,adverb"],
+            ["its,nounSingular,verbSingular,adverb"],
+            ["his,nounPlural,verbPlural,adverb"],
+            ["her,nounPlural,verbPlural,adverb"],
+            ["their,nounPlural,verbPlural,adverb"],
+            ["our,nounPlural,verbPlural,adverb"],
+            ["my,nounPlural,verbPlural,adverb"],
+            ["your,nounPlural,verbPlural,adverb"],
+            ["its,nounPlural,verbPlural,adverb"],
+            ["the,nounPlural,verbPlural,adverb"],
+            ["the,nounSingular,verbSingular,adverb"],
+            ["nounSingularAOrAn,verbSingular,adverb"],
+            ["the,adjective,nounPlural,verbPlural"],
+            ["the,adjective,nounSingular,verbSingular"],
+            ["adjectiveAOrAn,nounSingular,verbSingular"],
+            ["adjective,nounSingular,verbSingular"],
+            ["adjective,nounPlural,verbPlural"],
+            ["nounPlural,verbPlural,adverb"],
+            ["nounSingular,verbSingular,adverb"],
+            ["the,nounSingular,verbSingular,adverb"],
+            ["nounSingularAOrAn,verbSingular,adverb"],
+            ["wordOfGroupingAOrAn,of,nounPlural"],
+            ["wordOfGroupingAOrAn,of,nounPlural,verbPlural"],
+            ["nounPlural,nounLinkingSecondPlural,nounPlural"],
+            ["nounSingular,nounLinkingSecondSingular,nounSingular"],
+            //["any,any,any", ["1,1,5", "1,5,1", "5,1,1", "1,3,3", "3,1,3", "3,3,1", "1,2,4", "1,4,2", "4,2,1", "4,1,2", "2,2,3", "2,3,2", "3,2,2"]],
+            ["nounSingular,nounSingular,and,nounSingular"],
+            ["nounPlural,nounPlural,and,nounPlural"]
+      ];
+      return templates;
     }
 
     class Utilities {
