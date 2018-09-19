@@ -51,10 +51,10 @@ function getRandomPoem(isMobile) {
   populateDictionary(oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
 
   //decide how many lines (1 - 8)
-  let numberOfLines = Utilities.getRandomInteger(0, 8);
+  let numberOfLines = Utilities.getRandomInteger(1, 8);
   let poem = "";
   //for number of lines
-  for (int i = 0; i <numberOfLines; i++) {
+  for (let i = 0; i < numberOfLines; i++) {
 
     //choose a template
     let templateLibrary = getAllTemplates();
