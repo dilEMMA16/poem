@@ -19,9 +19,9 @@ function writeHaiku(isMobile) {
   //     onesybwords += oneSyllable[i][j].writtenWord + "     ";
   //   }
   // }
-  let firstLine = getLine(5, oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
-  let secondLine = getLine(7,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
-  let thirdLine = getLine(5,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
+  let firstLine = getLine(5, oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable, wordsUsed);
+  let secondLine = getLine(7,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable, wordsUsed);
+  let thirdLine = getLine(5,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable, wordsUsed);
   // let haiku = "<br><br>" + firstLine + "<br>" + secondLine + "<br>" + thirdLine + "<br><br>"
   //piece together poem
   //document.getElementById("poem").innerHTML = haiku
@@ -325,6 +325,8 @@ function getRandomPoem(isMobile) {
           oneSyllable[0].push(word);
           //2 syllables
           word = {writtenWord:"dabbles",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
+          word = {writtenWord:"allures",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
           word = {writtenWord:"squishes",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
@@ -705,6 +707,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"cajole",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
           word = {writtenWord:"divulge",type:"verbPlural",syllables:2,style:"all"};
+          twoSyllable[1].push(word);
+          word = {writtenWord:"allure",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
           word = {writtenWord:"tremble",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
@@ -1105,6 +1109,8 @@ function getRandomPoem(isMobile) {
           oneSyllable[3].push(word);
           //2 syllables
           word = {writtenWord:"jungle",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"allure",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"moonlight",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
@@ -2342,6 +2348,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"dojos",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"arcades",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"allures",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"bubbles",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
@@ -3895,7 +3903,7 @@ function getRandomPoem(isMobile) {
   //document.getElementById("poem3").innerHTML = (typeof fiveSyllable[5][indexToGet]);
   }
 
-  function getLine(numberOfSyllables,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable) {
+  function getLine(numberOfSyllables,oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable, wordsUsed) {
         let templateLibrary = getTemplatesForSevenSyllables();
         if (numberOfSyllables == 5) {
           templateLibrary = getTemplatesForFiveSyllables();
