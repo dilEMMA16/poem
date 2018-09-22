@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
     .active {
-      border-right: 20px solid #cdcbc1 !important;
-      border-left: 20px solid #cdcbc1 !important;
+      border-right: 20px solid #bab9af !important;
+      border-left: 20px solid #bab9af !important;
     }
 
         .sidenav {
@@ -34,8 +34,8 @@
             left: 0;
             background-color: #fff;
             overflow-x: hidden;
-            padding-top: 20px;
-            border-right: 2px solid #cdcbc1;
+
+            border-right: 2px solid #bab9af;
             text-align: center;
         }
 
@@ -43,7 +43,7 @@
                 padding: 6px 22px;
                 text-decoration: none;
                 font-size: 25px;
-                color: #cdcbc1;
+                color: #bab9af;
                 display: block;
             }
 
@@ -65,7 +65,7 @@
         body {
             font-family: 'Cutive Mono';
             font-size: 22px;
-            color: #cdcbc1;
+            color: #bab9af;
             display: block;
 
             /* Full height */
@@ -76,6 +76,11 @@
             margin-left: -250px;
         }
 
+        .menuButton:hover {
+          background-color: #435eb7 !important;
+          color: white !important;
+        }
+
     </style>
 </head>
 
@@ -84,9 +89,9 @@
 
 
         <!-- Sidebar -->
-        <div id="sidenav" class="w3-sidebar w3-bar-block w3-border-right" style="display:none">
-          <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-                    <img src="imgs/logo2.png" style="width:100%;padding:20px;">
+        <div id="sidenav" class="w3-sidebar w3-bar-block w3-border-right sidenav" style="display:none;height: 100vh;text-align: center;">
+          <button onclick="w3_close()" class="w3-bar-item w3-large menuButton" style="text-align:right;background-color:#4d6dd3; margin:0;">Close &times;</button>
+                    <img src="imgs/logo3.png" style="width:100%;padding:20px;">
                     <br><br>
                     <a href="index.html">create</a><br>
 
@@ -99,29 +104,26 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div class="main" style="background-image:url('imgs/POETRY.png')">
-          <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+        <div class="main" style="background-image:url('imgs/POETRY.png'); height: 100vh;background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */">
+        <button class="w3-button w3-xlarge menuButton"  id=threeLineButton style="background-color:#4d6dd3; height: 70px; margin-left: 15px; z-index: 5; position: absolute;"onclick="w3_open()">☰</button>
         <div class="container-fluid" style = "height:100%;">
-          <button type="button" id="sidebarCollapse" class="btn btn-info offpage" style="margin-left: 250px;">
-                <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
-            </button>
 
 
-          <div class="row" style="">
-            <div class="col-sm-4" style="padding:0px;">
-              <img src="imgs/starsleft.png" class="img-responsive"  style="padding-left: 0px;  padding-right: 0px;">
+
+          <div class="row" style="width:80vw !important;">
+            <div class="col-sm-3" style="padding:0px;">
             </div>
-            <div class="col-sm-4" class="align-middle" style="padding-top:10vh;text-align:center;">
-
+            <div class="col-sm-6" class="align-middle" style="padding-top:25vh;text-align:center;">
+              <p id="poem" style="height:200px;"></p><br><br><br>
+              <button type="button" class="w3-button menuButton" onclick="writeHaiku(false)">dame una poema</button>
             </div>
-            <div class="col-sm-4" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
-              <img src="imgs/starsright.png" class="img-responsive" style="">
+            <div class="col-sm-3" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
             </div>
           </div>
         </div>
-        <div class=" grassflowers">
-        </div>
+
 
         </div>
         <!-- /#page-content-wrapper -->
@@ -137,19 +139,14 @@
     </script>-->
 
     <script>
-          $(document).ready(function () {
-
-              $('#sidebarCollapse').on('click', function () {
-                  $('#sidebar').toggleClass('offpage');
-              });
-
-          });
 
           function w3_open() {
               document.getElementById("sidenav").style.display = "block";
+              document.getElementById("threeLineButton").style.display = "none";
           }
           function w3_close() {
               document.getElementById("sidenav").style.display = "none";
+              document.getElementById("threeLineButton").style.display = "inline-block";
           }
     </script>
 
