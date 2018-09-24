@@ -37,6 +37,23 @@ function writeHaiku(isMobile) {
 
 
 
+function getAllWords() {
+
+  let singularVerbs = "";
+
+  let pluralVerbs = "";
+
+  let adverbs = "";
+
+  let singularNouns = "";
+
+  let pluralNouns = "";
+
+  let adjectives = "";
+
+
+
+}
 
 function getRandomPoem(isMobile) {
   //two dimensional arrays to store word objects sorted by number of syllables
@@ -915,6 +932,8 @@ function getRandomPoem(isMobile) {
           twoSyllable[2].push(word);
           word = {writtenWord:"nunca",type:"adverb",syllables:2,style:"all"};
           twoSyllable[2].push(word);
+          word = {writtenWord:"for love",type:"adverb",syllables:2,style:"all"};
+          twoSyllable[2].push(word);
           word = {writtenWord:"casi",type:"adverb",syllables:2,style:"all"};
           twoSyllable[2].push(word);
           word = {writtenWord:"coolly",type:"adverb",syllables:2,style:"all"};
@@ -923,6 +942,8 @@ function getRandomPoem(isMobile) {
           twoSyllable[2].push(word);
           //3 syllables
           word = {writtenWord:"gracefully",type:"adverb",syllables:3,style:"all"};
+          threeSyllable[2].push(word);
+          word = {writtenWord:"for amor",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
           word = {writtenWord:"jovially",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
@@ -951,6 +972,8 @@ function getRandomPoem(isMobile) {
           //4 syllables
           word = {writtenWord:"jubilantly",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
+          word = {writtenWord:"without delay",type:"adverb",syllables:4,style:"all"};
+          fourSyllable[2].push(word);
           word = {writtenWord:"seductively",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
           word = {writtenWord:"lentamente",type:"adverb",syllables:4,style:"all"};
@@ -963,6 +986,8 @@ function getRandomPoem(isMobile) {
           fourSyllable[2].push(word);
           word = {writtenWord:"elegantly",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
+          word = {writtenWord:"between the sheets",type:"adverb",syllables:4,style:"all"};
+          fourSyllable[2].push(word);
           //5 syllables
           word = {writtenWord:"completamente",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
@@ -973,6 +998,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"alegremente",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
           word = {writtenWord:"todos los dias",type:"adverb",syllables:5,style:"all"};
+          fiveSyllable[2].push(word);
+          word = {writtenWord:"under the covers",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
 
 
@@ -986,8 +1013,6 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"glaze",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"gloss",type:"nounSingular",syllables:1,style:"all"};
-          oneSyllable[3].push(word);
-          word = {writtenWord:"wick",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"web",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
@@ -2181,8 +2206,6 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"globes",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"oils",type:"nounPlural",syllables:1,style:"all"};
-          oneSyllable[4].push(word);
-          word = {writtenWord:"wicks",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"webs",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
@@ -3564,6 +3587,8 @@ function getRandomPoem(isMobile) {
           threeSyllable[5].push(word);
           //4 syllables
           word = {writtenWord:"delectable",type:"adjective",syllables:4,style:"all"};
+          fourSyllable[5].push(word);
+          word = {writtenWord:"fallopian",type:"adjective",syllables:4,style:"all"};
           fourSyllable[5].push(word);
           word = {writtenWord:"subliminal",type:"adjective",syllables:4,style:"all"};
           fourSyllable[5].push(word);
