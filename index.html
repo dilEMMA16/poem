@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,18 +9,16 @@
     <meta name="author" content="">
 
     <title>poetree</title>
-
-    <link rel="icon" href="imgs/favicon.ico" type="image/icon" sizes="16x16">
-
+<link rel="icon" href="imgs/favicon.ico" type="image/icon" sizes="16x16">
     <!-- javascript for poem functionality -->
     <script type="text/javascript" src="testscript.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
     .active {
       border-right: 20px solid #bab9af !important;
@@ -36,7 +34,7 @@
             left: 0;
             background-color: #fff;
             overflow-x: hidden;
-            padding-top: 20px;
+
             border-right: 2px solid #bab9af;
             text-align: center;
         }
@@ -53,25 +51,15 @@
                     filter: brightness(110%);
                 }
 
-        button {
-            border-radius: 5px;
-            padding: 16px;
-            background-color: white;
-            border: 2px solid #bab9af;
-            color: #bab9af;
-            font-family: 'Cutive Mono';
-        }
-
-        button:hover{
-            color: white;
-            background-color: #bab9af;
-        }
 
         .main {
-            margin-left: 200px; /* Same as the width of the sidenav */
+            margin-left: 0px; /* Same as the width of the sidenav */
             padding: 0px;
             height: 100%;
             z-index: 2;
+            display: flex;
+            width: 100%;
+            align-items: stretch;
         }
 
         body {
@@ -83,91 +71,67 @@
             /* Full height */
             height: 100%;
         }
-        .grassflowers {
-          position:absolute;
-          bottom: 0px;
-          background-image: url("imgs/backgroundpoemflowers.png");
-          height: 200px;
-          z-index: 1;
-          background-position:top;
-          background-repeat: repeat-x;
-          background-size: contain;
-          width: calc(100% - 200px);
-          overflow-x: hidden !important;
+
+        #sidebar.offpage {
+            margin-left: -250px;
         }
+
+        .menuButton {
+          background-color: #2f4052;
+        }
+
+        .menuButton:hover {
+          background-color: #a97937 !important;
+          color: white !important;
+        }
+        .menuButton2:hover {
+          background-color: #4a6241 !important;
+          color: white !important;
+        }
+
     </style>
 </head>
 
 <body>
 
-          <header style="display: none;">
-                  <nav id=navigation class="navbar bg-light navbar-dark myNav" style="z-index: 5;">
-                      <a class="navbar-brand" href="index.html"><img src="imgs/logo2.png" id=navPic alt="poem"></a>
-                      <button class="navbar-toggler" type="button" onclick="showNav();">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse myCollapseNav" id="collapsibleNavbar" >
-                        <ul class="navbar-nav" id="navElements">
-                          <li class="nav-item">
-                            <a class="nav-link active" href="index.html">create</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="words.html">words</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="how.html">how it works</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact</a>
-                          </li>
-                        </ul>
-                      </div>
-                  </nav>
-              </header>
+
 
         <!-- Sidebar -->
-        <div class="sidenav">
-                    <img src="imgs/logo2.png" style="width:100%;padding:20px;">
+        <div id="sidenav" class="w3-sidebar w3-bar-block w3-border-right sidenav" style="display:none;height: 100vh;text-align: center;">
+          <button onclick="w3_close()" class="w3-bar-item w3-large menuButton2" style="text-align:right;background-color:#638257; margin:0;">Close &times;</button>
+                    <img src="imgs/logo3.png" style="width:100%;padding:20px;">
                     <br><br>
                     <a href="index.html" class="active">create</a><br>
 
                     <a href="words.html">words</a><br>
 
-                    <a href="how.html">how it works</a><br>
+                    <a href="how.html" >how it works</a><br>
 
                     <a href="contact.html">contact</a><br>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div class="main" style="">
-
+        <div class="main" style="background-image:url('imgs/POETRY7.png'); height: 100vh;background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */">
+        <button class="w3-button w3-xlarge menuButton2"  id=threeLineButton style="background-color:#638257; height: 70px; margin-left: 15px; z-index: 5; position: absolute;"onclick="w3_open()">☰</button>
         <div class="container-fluid" style = "height:100%;">
-          <div class="row" id="desktopoutput"style="">
-            <div class="col-sm-4" style="padding:0px;">
-              <img src="imgs/starsleft.png" class="img-responsive"  style="padding-left: 0px;  padding-right: 0px;">
+
+
+
+          <div class="row" style="width:80vw !important;">
+            <div class="col-sm-3" style="padding:0px;">
             </div>
-            <div class="col-sm-4" class="align-middle" style="padding-top:10vh;text-align:center;">
+            <div class="col-sm-6" class="align-middle" style="padding-top:25vh;text-align:center;">
               <p id="poem" style="height:200px;"></p><br><br><br>
-              <button type="button" onclick="writeHaiku(false)">dame una poema</button>
+              <button type="button" class="w3-button menuButton" onclick="writeHaiku(false)">dame una poema</button>
             </div>
-            <div class="col-sm-4" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
-              <img src="imgs/starsright.png" class="img-responsive" style="">
-            </div>
-          </div>
-          <div class="row mobileoutput" id="writtenOutput"style="display:none;">
-            <div class="col-sm-12" class="align-middle" style="text-align:center;">
-              <p id="poemmobile" style="height:200px;"></p>
-            </div>
-          </div>
-          <div class="row mobileoutput" style="display:none;">
-            <div class="col-sm-12" class="align-middle" style="text-align:center;height:100px;">
-              <button type="button" onclick="writeHaiku(true)">dame una poema</button>
+            <div class="col-sm-3" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
             </div>
           </div>
         </div>
-        <div class=" grassflowers">
-        </div>
+
 
         </div>
         <!-- /#page-content-wrapper -->
@@ -182,73 +146,20 @@
     });
     </script>-->
 
+    <script>
+
+          function w3_open() {
+              document.getElementById("sidenav").style.display = "block";
+              document.getElementById("threeLineButton").style.display = "none";
+          }
+          function w3_close() {
+              document.getElementById("sidenav").style.display = "none";
+              document.getElementById("threeLineButton").style.display = "inline-block";
+          }
+    </script>
+
 </body>
-<script>
-                    let toggle = 0;
-                    $(window).scroll(
-                    {
-                        previousTop: 0
-                    },
-
-                    function () {
-
-                            var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
-
-                            if(width > 1024){
-                                    var currentTop = $(window).scrollTop();
-                                    if (currentTop < this.previousTop) {
-                                        /*$(".sidebar em").text("Up"); /* optional for demo */
-                                        $("#navigation").fadeIn();
-
-                                    } else {
-                                        /*$(".sidebar em").text("Down");*/
-                                        $("#navigation").fadeOut();
-                                        $('#collapsibleNavbar').hide();
-                                        toggle = 0;
-                                        $('#scrollIcon').hide();
 
 
-                                    }
-                                    this.previousTop = currentTop;
 
-                                    if($(window).scrollTop() === 0) {
-                                        $("#scrollIcon").show();
-                                      }
-
-                            }
-                            else {
-
-                                document.getElementById("navigation").style.position = fixed;
-                                document.getElementById("navigation").style.top = 0;
-                                document.getElementById("navigation").style.width = "100%" ;
-                                document.getElementById("navigation").style.margin = 0;
-                                document.getElementById("navigation").style.padding = 0;
-
-                                if (width < 400 )
-                                {
-                                    var elements = document.getElementsByClassName('buttonPeach');
-                                    for (var i in elements) {
-                                      if (elements.hasOwnProperty(i)) {
-                                        elements[i].style.fontSize = '3em';
-                                      }
-                                    }
-                                }
-                            }
-
-
-                   });
-
-                    function showNav(){
-                        if (toggle == 0)
-                        {
-                           $('#collapsibleNavbar').show();
-                           toggle = 1;
-                        }
-                        else if (toggle == 1)
-                        {
-                            $('#collapsibleNavbar').hide();
-                            toggle = 0;
-                        }
-                    }
-            </script>
 </html>

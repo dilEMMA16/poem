@@ -9,21 +9,21 @@
     <meta name="author" content="">
 
     <title>poetree</title>
-
+<link rel="icon" href="imgs/favicon.ico" type="image/icon" sizes="16x16">
     <!-- javascript for poem functionality -->
     <script type="text/javascript" src="testscript.js"></script>
-<link rel="icon" href="imgs/favicon.ico" type="image/icon" sizes="16x16">
+
     <link href='https://fonts.googleapis.com/css?family=Cutive Mono' rel='stylesheet'>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
     .active {
       border-right: 20px solid #bab9af !important;
       border-left: 20px solid #bab9af !important;
     }
-
 
         .sidenav {
             height: 100%;
@@ -34,7 +34,7 @@
             left: 0;
             background-color: #fff;
             overflow-x: hidden;
-            padding-top: 20px;
+
             border-right: 2px solid #bab9af;
             text-align: center;
         }
@@ -53,10 +53,13 @@
 
 
         .main {
-            margin-left: 200px; /* Same as the width of the sidenav */
+            margin-left: 0px; /* Same as the width of the sidenav */
             padding: 0px;
             height: 100%;
             z-index: 2;
+            display: flex;
+            width: 100%;
+            align-items: stretch;
         }
 
         body {
@@ -68,18 +71,20 @@
             /* Full height */
             height: 100%;
         }
-        .grassflowers {
-          position:absolute;
-          bottom: 0px;
-          background-image: url("imgs/backgroundpoemflowers.png");
-          height: 200px;
-          z-index: 1;
-          background-position:top;
-          background-repeat: repeat-x;
-          background-size: contain;
-          width: calc(100% - 200px);
-          overflow-x: hidden !important;
+
+        #sidebar.offpage {
+            margin-left: -250px;
         }
+
+        .menuButton {
+          background-color: #ba6a56;
+        }
+
+        .menuButton:hover {
+          background-color: #c15323 !important;
+          color: white !important;
+        }
+
     </style>
 </head>
 
@@ -88,8 +93,9 @@
 
 
         <!-- Sidebar -->
-        <div class="sidenav">
-                    <img src="imgs/logo2.png" style="width:100%;padding:20px;">
+        <div id="sidenav" class="w3-sidebar w3-bar-block w3-border-right sidenav" style="display:none;height: 100vh;text-align: center;">
+          <button onclick="w3_close()" class="w3-bar-item w3-large menuButton" style="text-align:right;background-color:#c15323; margin:0;">Close &times;</button>
+                    <img src="imgs/logo3.png" style="width:100%;padding:20px;">
                     <br><br>
                     <a href="index.html">create</a><br>
 
@@ -102,23 +108,26 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div class="main" style="">
-
+        <div class="main" style="background-image:url('imgs/POETRY2.png'); height: 100vh;background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */">
+        <button class="w3-button w3-xlarge menuButton"  id=threeLineButton style="background-color:#d37962; height: 70px; margin-left: 15px; z-index: 5; position: absolute;"onclick="w3_open()">☰</button>
         <div class="container-fluid" style = "height:100%;">
-          <div class="row" style="">
-            <div class="col-sm-4" style="padding:0px;">
-              <img src="imgs/starsleft.png" class="img-responsive"  style="padding-left: 0px;  padding-right: 0px;">
-            </div>
-            <div class="col-sm-4" class="align-middle" style="padding-top:10vh;text-align:center;">
 
+
+
+          <div class="row" style="width:80vw !important;">
+            <div class="col-sm-3" style="padding:0px;">
             </div>
-            <div class="col-sm-4" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
-              <img src="imgs/starsright.png" class="img-responsive" style="">
+            <div class="col-sm-6" class="align-middle" style="padding-top:25vh;text-align:center;">
+              <p id="poem" style="height:200px;"></p><br><br><br>
+              <button type="button" class="w3-button menuButton" onclick="writeHaiku(false)">dame una poema</button>
+            </div>
+            <div class="col-sm-3" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
             </div>
           </div>
         </div>
-        <div class=" grassflowers">
-        </div>
+
 
         </div>
         <!-- /#page-content-wrapper -->
@@ -133,6 +142,20 @@
     });
     </script>-->
 
+    <script>
+
+          function w3_open() {
+              document.getElementById("sidenav").style.display = "block";
+              document.getElementById("threeLineButton").style.display = "none";
+          }
+          function w3_close() {
+              document.getElementById("sidenav").style.display = "none";
+              document.getElementById("threeLineButton").style.display = "inline-block";
+          }
+    </script>
+
 </body>
+
+
 
 </html>
