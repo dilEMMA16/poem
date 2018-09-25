@@ -302,6 +302,10 @@ function getRandomPoem(isMobile) {
           oneSyllable[0].push(word);
           word = {writtenWord:"pours",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
+          word = {writtenWord:"taunts",type:"verbSingular",syllables:1,style:"all"};
+          oneSyllable[0].push(word);
+          word = {writtenWord:"tempts",type:"verbSingular",syllables:1,style:"all"};
+          oneSyllable[0].push(word);
           word = {writtenWord:"pouts",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
           word = {writtenWord:"ebbs",type:"verbSingular",syllables:1,style:"all"};
@@ -315,6 +319,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"wanes",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
           word = {writtenWord:"prays",type:"verbSingular",syllables:1,style:"all"};
+          oneSyllable[0].push(word);
+          word = {writtenWord:"moans",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
           word = {writtenWord:"purrs",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
@@ -333,6 +339,10 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"dupes",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
           word = {writtenWord:"dwells",type:"verbSingular",syllables:1,style:"all"};
+          oneSyllable[0].push(word);
+          word = {writtenWord:"kneels",type:"verbSingular",syllables:1,style:"all"};
+          oneSyllable[0].push(word);
+          word = {writtenWord:"lusts",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
           word = {writtenWord:"tilts",type:"verbSingular",syllables:1,style:"all"};
           oneSyllable[0].push(word);
@@ -415,6 +425,10 @@ function getRandomPoem(isMobile) {
           twoSyllable[0].push(word);
           word = {writtenWord:"blossoms",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
+          word = {writtenWord:"touches",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
+          word = {writtenWord:"flushes",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
           word = {writtenWord:"beholds",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
           word = {writtenWord:"debugs",type:"verbSingular",syllables:2,style:"all"};
@@ -435,11 +449,21 @@ function getRandomPoem(isMobile) {
           twoSyllable[0].push(word);
           word = {writtenWord:"lingers",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
+          word = {writtenWord:"forgets",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
           word = {writtenWord:"dissolves",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
           word = {writtenWord:"hushes",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
           word = {writtenWord:"tiptoes",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
+          word = {writtenWord:"sizzles",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
+          word = {writtenWord:"fizzles",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
+          word = {writtenWord:"fizzes",type:"verbSingular",syllables:2,style:"all"};
+          twoSyllable[0].push(word);
+          word = {writtenWord:"worships",type:"verbSingular",syllables:2,style:"all"};
           twoSyllable[0].push(word);
           //3 syllables
           word = {writtenWord:"magnifies",type:"verbSingular",syllables:3,style:"all"};
@@ -492,8 +516,6 @@ function getRandomPoem(isMobile) {
           threeSyllable[0].push(word);
           word = {writtenWord:"chaperones",type:"verbSingular",syllables:3,style:"all"};
           threeSyllable[0].push(word);
-          word = {writtenWord:"awakens",type:"verbSingular",syllables:3,style:"all"};
-          threeSyllable[0].push(word);
           word = {writtenWord:"eclipses",type:"verbSingular",syllables:3,style:"all"};
           threeSyllable[0].push(word);
           word = {writtenWord:"misconstrues",type:"verbSingular",syllables:3,style:"all"};
@@ -524,8 +546,12 @@ function getRandomPoem(isMobile) {
           threeSyllable[0].push(word);
           word = {writtenWord:"dulcifies",type:"verbSingular",syllables:3,style:"all"};
           threeSyllable[0].push(word);
+          word = {writtenWord:"awakens",type:"verbSingular",syllables:3,style:"all"};
+          threeSyllable[0].push(word);
           //4 syllables
           word = {writtenWord:"evaporates",type:"verbSingular",syllables:4,style:"all"};
+          fourSyllable[0].push(word);
+          word = {writtenWord:"pitter patters",type:"verbSingular",syllables:4,style:"all"};
           fourSyllable[0].push(word);
           word = {writtenWord:"atomizes",type:"verbSingular",syllables:4,style:"all"};
           fourSyllable[0].push(word);
@@ -572,9 +598,15 @@ function getRandomPoem(isMobile) {
           //1 syllables
           word = {writtenWord:"dunk",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
+          word = {writtenWord:"moan",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
+          word = {writtenWord:"flush",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
           word = {writtenWord:"delve",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"coo",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
+          word = {writtenWord:"fizz",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"chunk",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
@@ -642,11 +674,17 @@ function getRandomPoem(isMobile) {
           oneSyllable[1].push(word);
           word = {writtenWord:"foam",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
+          word = {writtenWord:"tempt",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
+          word = {writtenWord:"taunt",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
           word = {writtenWord:"bloom",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"quell",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"coo",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
+          word = {writtenWord:"kneel",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"churn",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
@@ -654,7 +692,11 @@ function getRandomPoem(isMobile) {
           oneSyllable[1].push(word);
           word = {writtenWord:"dwell",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
+          word = {writtenWord:"lust",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
           word = {writtenWord:"tilt",type:"verbPlural",syllables:1,style:"all"};
+          oneSyllable[1].push(word);
+          word = {writtenWord:"touch",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
           word = {writtenWord:"tip",type:"verbPlural",syllables:1,style:"all"};
           oneSyllable[1].push(word);
@@ -665,6 +707,14 @@ function getRandomPoem(isMobile) {
           //2 syllables
           word = {writtenWord:"dabble",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
+          word = {writtenWord:"scribble",type:"verbPlural",syllables:2,style:"all"};
+          twoSyllable[1].push(word);
+          word = {writtenWord:"worship",type:"verbPlural",syllables:2,style:"all"};
+          twoSyllable[1].push(word);
+          word = {writtenWord:"fizzle",type:"verbPlural",syllables:2,style:"all"};
+          twoSyllable[1].push(word);
+          word = {writtenWord:"sizzle",type:"verbPlural",syllables:2,style:"all"};
+          twoSyllable[1].push(word);
           word = {writtenWord:"stumble",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
           word = {writtenWord:"obsolve",type:"verbPlural",syllables:2,style:"all"};
@@ -674,6 +724,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"drizzle",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
           word = {writtenWord:"fulfill",type:"verbPlural",syllables:2,style:"all"};
+          twoSyllable[1].push(word);
+          word = {writtenWord:"forget",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
           word = {writtenWord:"transcend",type:"verbPlural",syllables:2,style:"all"};
           twoSyllable[1].push(word);
@@ -764,6 +816,8 @@ function getRandomPoem(isMobile) {
           threeSyllable[1].push(word);
           word = {writtenWord:"atomize",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
+          word = {writtenWord:"awaken",type:"verbPlural",syllables:3,style:"all"};
+          threeSyllable[1].push(word);
           word = {writtenWord:"boondoggle",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
           word = {writtenWord:"malinger",type:"verbPlural",syllables:3,style:"all"};
@@ -838,8 +892,6 @@ function getRandomPoem(isMobile) {
           threeSyllable[1].push(word);
           word = {writtenWord:"misconstrue",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
-          word = {writtenWord:"awaken",type:"verbPlural",syllables:3,style:"all"};
-          threeSyllable[1].push(word);
           word = {writtenWord:"serenade",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
           //4 syllables
@@ -858,6 +910,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"electrify",type:"verbPlural",syllables:4,style:"all"};
           fourSyllable[1].push(word);
           word = {writtenWord:"rejuvenate",type:"verbPlural",syllables:4,style:"all"};
+          fourSyllable[1].push(word);
+          word = {writtenWord:"pitter patter",type:"verbPlural",syllables:4,style:"all"};
           fourSyllable[1].push(word);
           word = {writtenWord:"caramelize",type:"verbPlural",syllables:4,style:"all"};
           fourSyllable[1].push(word);
@@ -943,6 +997,10 @@ function getRandomPoem(isMobile) {
           //3 syllables
           word = {writtenWord:"gracefully",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
+          word = {writtenWord:"lovingly",type:"adverb",syllables:3,style:"all"};
+          threeSyllable[2].push(word);
+          word = {writtenWord:"tenderly",type:"adverb",syllables:3,style:"all"};
+          threeSyllable[2].push(word);
           word = {writtenWord:"for amor",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
           word = {writtenWord:"jovially",type:"adverb",syllables:3,style:"all"};
@@ -950,6 +1008,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"kookily",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
           word = {writtenWord:"zestily",type:"adverb",syllables:3,style:"all"};
+          threeSyllable[2].push(word);
+          word = {writtenWord:"lustfully",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
           word = {writtenWord:"siempre",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
@@ -969,6 +1029,10 @@ function getRandomPoem(isMobile) {
           threeSyllable[2].push(word);
           word = {writtenWord:"foolishly",type:"adverb",syllables:3,style:"all"};
           threeSyllable[2].push(word);
+          word = {writtenWord:"temptingly",type:"adverb",syllables:3,style:"all"};
+          threeSyllable[2].push(word);
+          word = {writtenWord:"tauntingly",type:"adverb",syllables:3,style:"all"};
+          threeSyllable[2].push(word);
           //4 syllables
           word = {writtenWord:"jubilantly",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
@@ -977,6 +1041,10 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"seductively",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
           word = {writtenWord:"lentamente",type:"adverb",syllables:4,style:"all"};
+          fourSyllable[2].push(word);
+          word = {writtenWord:"devilishly",type:"adverb",syllables:4,style:"all"};
+          fourSyllable[2].push(word);
+          word = {writtenWord:"dangerously",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
           word = {writtenWord:"brevemente",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
@@ -988,6 +1056,8 @@ function getRandomPoem(isMobile) {
           fourSyllable[2].push(word);
           word = {writtenWord:"between the sheets",type:"adverb",syllables:4,style:"all"};
           fourSyllable[2].push(word);
+          word = {writtenWord:"in slow motion",type:"adverb",syllables:4,style:"all"};
+          fourSyllable[2].push(word);
           //5 syllables
           word = {writtenWord:"completamente",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
@@ -997,9 +1067,13 @@ function getRandomPoem(isMobile) {
           fiveSyllable[2].push(word);
           word = {writtenWord:"alegremente",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
+          word = {writtenWord:"overwhelmingly",type:"adverb",syllables:5,style:"all"};
+          fiveSyllable[2].push(word);
           word = {writtenWord:"todos los dias",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
           word = {writtenWord:"under the covers",type:"adverb",syllables:5,style:"all"};
+          fiveSyllable[2].push(word);
+          word = {writtenWord:"precariously",type:"adverb",syllables:5,style:"all"};
           fiveSyllable[2].push(word);
 
 
@@ -1008,9 +1082,15 @@ function getRandomPoem(isMobile) {
           //1 syllables
           word = {writtenWord:"globe",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
+          word = {writtenWord:"moan",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
           word = {writtenWord:"oil",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
+          word = {writtenWord:"kiss",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
           word = {writtenWord:"glaze",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
+          word = {writtenWord:"sea",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"gloss",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
@@ -1046,6 +1126,8 @@ function getRandomPoem(isMobile) {
           oneSyllable[3].push(word);
           word = {writtenWord:"blush",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
+          word = {writtenWord:"bay",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
           word = {writtenWord:"pyre",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"pie",type:"nounSingular",syllables:1,style:"all"};
@@ -1078,6 +1160,8 @@ function getRandomPoem(isMobile) {
           oneSyllable[3].push(word);
           word = {writtenWord:"zeal",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
+          word = {writtenWord:"sex",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
           word = {writtenWord:"dough",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"freud",type:"nounSingular",syllables:1,style:"all"};
@@ -1087,6 +1171,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"roast",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"mood",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
+          word = {writtenWord:"lust",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"hem",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
@@ -1109,6 +1195,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"silk",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"milk",type:"nounSingular",syllables:1,style:"all"};
+          oneSyllable[3].push(word);
+          word = {writtenWord:"art",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
           word = {writtenWord:"spice",type:"nounSingular",syllables:1,style:"all"};
           oneSyllable[3].push(word);
@@ -1137,6 +1225,8 @@ function getRandomPoem(isMobile) {
           twoSyllable[3].push(word);
           word = {writtenWord:"allure",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
+          word = {writtenWord:"wetness",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
           word = {writtenWord:"moonlight",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"sunlight",type:"nounSingular",syllables:2,style:"all"};
@@ -1164,6 +1254,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"darling",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"goblet",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"raindrop",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"silver",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
@@ -1547,20 +1639,42 @@ function getRandomPoem(isMobile) {
           twoSyllable[3].push(word);
           word = {writtenWord:"demure",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
+          word = {writtenWord:"whiskey",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"virgin",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"lipstick",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
           word = {writtenWord:"newness",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"sweetness",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"madness",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
+          word = {writtenWord:"blindfold",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"lip stains",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
           word = {writtenWord:"panther",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"sweetness",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"leopard",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"twilight",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
+          word = {writtenWord:"rhythm",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"kissing",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
+          word = {writtenWord:"make out",type:"nounSingular",syllables:2,style:"all"};
+          twoSyllable[3].push(word);
           //3 syllables
           word = {writtenWord:"petichor",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
+          word = {writtenWord:"undoing",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
+          word = {writtenWord:"unwraveling",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
           word = {writtenWord:"canoodle",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
@@ -1780,6 +1894,8 @@ function getRandomPoem(isMobile) {
           threeSyllable[3].push(word);
           word = {writtenWord:"semaphore",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
+          word = {writtenWord:"illusion",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
           word = {writtenWord:"boolean",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
           word = {writtenWord:"encryption",type:"nounSingular",syllables:3,style:"all"};
@@ -1960,7 +2076,17 @@ function getRandomPoem(isMobile) {
           threeSyllable[3].push(word);
           word = {writtenWord:"bikini",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
+          word = {writtenWord:"wallflower",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
+          word = {writtenWord:"pirouette",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
+          word = {writtenWord:"tenderness",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
+          word = {writtenWord:"pleated skirt",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
           word = {writtenWord:"cabana",type:"nounSingular",syllables:3,style:"all"};
+          threeSyllable[3].push(word);
+          word = {writtenWord:"forever",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
           word = {writtenWord:"persuasion",type:"nounSingular",syllables:3,style:"all"};
           threeSyllable[3].push(word);
@@ -2058,6 +2184,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"patron xo",type:"nounSingular",syllables:4,style:"all"};
           fourSyllable[3].push(word);
           word = {writtenWord:"xoxo",type:"nounSingular",syllables:4,style:"all"};
+          fourSyllable[3].push(word);
+          word = {writtenWord:"connotation",type:"nounSingular",syllables:4,style:"all"};
           fourSyllable[3].push(word);
           word = {writtenWord:"zanahoria",type:"nounSingular",syllables:4,style:"all"};
           fourSyllable[3].push(word);
@@ -2199,7 +2327,13 @@ function getRandomPoem(isMobile) {
           //1 syllables
           word = {writtenWord:"lips",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
+          word = {writtenWord:"bays",type:"nounPlural",syllables:1,style:"all"};
+          oneSyllable[4].push(word);
+          word = {writtenWord:"arts",type:"nounPlural",syllables:1,style:"all"};
+          oneSyllable[4].push(word);
           word = {writtenWord:"gowns",type:"nounPlural",syllables:1,style:"all"};
+          oneSyllable[4].push(word);
+          word = {writtenWord:"moans",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"rues",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
@@ -2251,6 +2385,8 @@ function getRandomPoem(isMobile) {
           oneSyllable[4].push(word);
           word = {writtenWord:"jams",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
+          word = {writtenWord:"seas",type:"nounPlural",syllables:1,style:"all"};
+          oneSyllable[4].push(word);
           word = {writtenWord:"loops",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"lulls",type:"nounPlural",syllables:1,style:"all"};
@@ -2285,6 +2421,8 @@ function getRandomPoem(isMobile) {
           oneSyllable[4].push(word);
           word = {writtenWord:"babes",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
+          word = {writtenWord:"legs",type:"nounPlural",syllables:1,style:"all"};
+          oneSyllable[4].push(word);
           word = {writtenWord:"gowns",type:"nounPlural",syllables:1,style:"all"};
           oneSyllable[4].push(word);
           word = {writtenWord:"rues",type:"nounPlural",syllables:1,style:"all"};
@@ -2293,6 +2431,14 @@ function getRandomPoem(isMobile) {
           oneSyllable[4].push(word);
           //2 syllables
           word = {writtenWord:"curves",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"blindfolds",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"snuggles",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"kisses",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"virgins",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"muses",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
@@ -2316,6 +2462,8 @@ function getRandomPoem(isMobile) {
           twoSyllable[4].push(word);
           word = {writtenWord:"blushes",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
+          word = {writtenWord:"raindops",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
           word = {writtenWord:"peaches",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"flores",type:"nounPlural",syllables:2,style:"all"};
@@ -2338,6 +2486,10 @@ function getRandomPoem(isMobile) {
           twoSyllable[4].push(word);
           word = {writtenWord:"alters",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
+          word = {writtenWord:"lipsticks",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"lip stains",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
           word = {writtenWord:"dollops",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"marbles",type:"nounPlural",syllables:2,style:"all"};
@@ -2345,6 +2497,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"tangents",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"tassels",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
+          word = {writtenWord:"panties",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"lagoons",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
@@ -2580,6 +2734,8 @@ function getRandomPoem(isMobile) {
           twoSyllable[4].push(word);
           word = {writtenWord:"tapas",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
+          word = {writtenWord:"rhythms",type:"nounPlural",syllables:2,style:"all"};
+          twoSyllable[4].push(word);
           word = {writtenWord:"chakras",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"dalias",type:"nounPlural",syllables:2,style:"all"};
@@ -2639,15 +2795,25 @@ function getRandomPoem(isMobile) {
           threeSyllable[4].push(word);
           word = {writtenWord:"chariots",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
+          word = {writtenWord:"pleated skirts",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
+          word = {writtenWord:"pirouettes",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
           word = {writtenWord:"alibis",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
+          word = {writtenWord:"wallflowers",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"cottages",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"abysses",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
+          word = {writtenWord:"illusions",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
           word = {writtenWord:"empresses",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"temptresses",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
+          word = {writtenWord:"forevers",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"priestesses",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
@@ -2668,6 +2834,10 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"vanillas",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"chemicals",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
+          word = {writtenWord:"unwravelings",type:"nounPlural",syllables:3,style:"all"};
+          threeSyllable[4].push(word);
+          word = {writtenWord:"undoings",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"baristas",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
@@ -2946,6 +3116,8 @@ function getRandomPoem(isMobile) {
           fourSyllable[4].push(word);
           word = {writtenWord:"calligraphies",type:"nounPlural",syllables:4,style:"all"};
           fourSyllable[4].push(word);
+          word = {writtenWord:"connotations",type:"nounPlural",syllables:4,style:"all"};
+          fourSyllable[4].push(word);
           word = {writtenWord:"laboratories",type:"nounPlural",syllables:4,style:"all"};
           fourSyllable[4].push(word);
           word = {writtenWord:"dichotomies",type:"nounPlural",syllables:4,style:"all"};
@@ -3154,11 +3326,35 @@ function getRandomPoem(isMobile) {
           oneSyllable[5].push(word);
           word = {writtenWord:"numb",type:"adjective",syllables:1,style:"all"};
           oneSyllable[5].push(word);
+          word = {writtenWord:"bare",type:"adjective",syllables:1,style:"all"};
+          oneSyllable[5].push(word);
+          word = {writtenWord:"flushed",type:"adjective",syllables:1,style:"all"};
+          oneSyllable[5].push(word);
+          word = {writtenWord:"full",type:"adjective",syllables:1,style:"all"};
+          oneSyllable[5].push(word);
+          word = {writtenWord:"wet",type:"adjective",syllables:1,style:"all"};
+          oneSyllable[5].push(word);
 
           //2 syllables
           word = {writtenWord:"chiseled",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
+          word = {writtenWord:"raindrop",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"adrift",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"darkest",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"vexing",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"unmade",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"undressed",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
           word = {writtenWord:"woozy",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"rhythmic",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"lover's",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
           word = {writtenWord:"rosebud",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
@@ -3388,6 +3584,20 @@ function getRandomPoem(isMobile) {
           twoSyllable[5].push(word);
           word = {writtenWord:"oval",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
+          word = {writtenWord:"whiskey",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"frosted",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"frosty",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"virgin",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"messy",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"lonely",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
+          word = {writtenWord:"egg nog",type:"adjective",syllables:2,style:"all"};
+          twoSyllable[5].push(word);
           word = {writtenWord:"boozy",type:"adjective",syllables:2,style:"all"};
           twoSyllable[5].push(word);
           word = {writtenWord:"twilight",type:"adjective",syllables:2,style:"all"};
@@ -3395,11 +3605,33 @@ function getRandomPoem(isMobile) {
           //3 syllables
           word = {writtenWord:"delightful",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
+          word = {writtenWord:"blindfolded",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"slow motion",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"perplexing",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"hypnotized",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"unbuttoned",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"forever",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"delicate",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"innocent",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"sugary",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
           word = {writtenWord:"unholy",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"forgotten",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"cabana",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"saturday",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"hypnotic",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"buttercream",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
@@ -3515,8 +3747,6 @@ function getRandomPoem(isMobile) {
           threeSyllable[5].push(word);
           word = {writtenWord:"coconut",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"egg nog",type:"adjective",syllables:2,style:"all"};
-          threeSyllable[5].push(word);
           word = {writtenWord:"canary",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"daffodil",type:"adjective",syllables:3,style:"all"};
@@ -3549,9 +3779,9 @@ function getRandomPoem(isMobile) {
           threeSyllable[5].push(word);
           word = {writtenWord:"burgundy",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"gun metal",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"gun metal",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"jungle green",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"jungle green",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"marshmallow",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
@@ -3563,7 +3793,7 @@ function getRandomPoem(isMobile) {
           threeSyllable[5].push(word);
           word = {writtenWord:"butterbeer",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"rocky road",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"rocky road",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           word = {writtenWord:"seductive",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
@@ -3571,19 +3801,21 @@ function getRandomPoem(isMobile) {
           threeSyllable[5].push(word);
           word = {writtenWord:"seductive",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"lemon drop",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"lemon drop",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"milky way",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"milky way",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"poetic",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"poetic",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"ivory",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"ivory",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"murmurous",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"murmurous",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"indolent",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"indolent",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
-          word = {writtenWord:"livid",type:"adjective",syllables:2,style:"all"};
+          word = {writtenWord:"livid",type:"adjective",syllables:3,style:"all"};
+          threeSyllable[5].push(word);
+          word = {writtenWord:"bottled up",type:"adjective",syllables:3,style:"all"};
           threeSyllable[5].push(word);
           //4 syllables
           word = {writtenWord:"delectable",type:"adjective",syllables:4,style:"all"};
@@ -3742,7 +3974,13 @@ function getRandomPoem(isMobile) {
           oneSyllable[6].push(word);
           word = {writtenWord:"quilt",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
+          word = {writtenWord:"reign",type:"wordOfGrouping",syllables:1,style:"all"};
+          oneSyllable[6].push(word);
+          word = {writtenWord:"bay",type:"wordOfGrouping",syllables:1,style:"all"};
+          oneSyllable[6].push(word);
           word = {writtenWord:"scoop",type:"wordOfGrouping",syllables:1,style:"all"};
+          oneSyllable[6].push(word);
+          word = {writtenWord:"touch",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
           word = {writtenWord:"dose",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
@@ -3751,6 +3989,8 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"thoughts",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
           word = {writtenWord:"spool",type:"wordOfGrouping",syllables:1,style:"all"};
+          oneSyllable[6].push(word);
+          word = {writtenWord:"sea",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
           word = {writtenWord:"grove",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
@@ -3762,8 +4002,14 @@ function getRandomPoem(isMobile) {
           oneSyllable[6].push(word);
           word = {writtenWord:"cloud",type:"wordOfGrouping",syllables:1,style:"all"};
           oneSyllable[6].push(word);
+          word = {writtenWord:"page",type:"wordOfGrouping",syllables:1,style:"all"};
+          oneSyllable[6].push(word);
           //2 syllables
           word = {writtenWord:"puddle",type:"wordOfGrouping",syllables:2,style:"all"};
+          twoSyllable[6].push(word);
+          word = {writtenWord:"pages",type:"wordOfGrouping",syllables:2,style:"all"};
+          twoSyllable[6].push(word);
+          word = {writtenWord:"bottle",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
           word = {writtenWord:"bouquet",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
@@ -3776,6 +4022,10 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"orchard",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
           word = {writtenWord:"cocktail",type:"wordOfGrouping",syllables:2,style:"all"};
+          twoSyllable[6].push(word);
+          word = {writtenWord:"rhythm",type:"wordOfGrouping",syllables:2,style:"all"};
+          twoSyllable[6].push(word);
+          word = {writtenWord:"rhythms",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
           word = {writtenWord:"coven",type:"wordOfGrouping",syllables:2,style:"all"};
           twoSyllable[6].push(word);
@@ -3848,6 +4098,7 @@ function getRandomPoem(isMobile) {
           //1 syllables
           word = {writtenWord:"and",type:"nounLinkingSecondSingular",syllables:1,style:"all"};
           oneSyllable[7].push(word);
+
           //2 syllables
           word = {writtenWord:"marries",type:"nounLinkingSecondSingular",syllables:2,style:"all"};
           twoSyllable[7].push(word);
@@ -3857,12 +4108,20 @@ function getRandomPoem(isMobile) {
           twoSyllable[7].push(word);
           word = {writtenWord:"attracts",type:"nounLinkingSecondSingular",syllables:2,style:"all"};
           twoSyllable[7].push(word);
+          word = {writtenWord:"longs for",type:"nounLinkingSecondSingular",syllables:2,style:"all"};
+          twoSyllable[7].push(word);
           //3 syllables
           word = {writtenWord:"crowned with a",type:"nounLinkingSecondSingular",syllables:3,style:"all"};
+          threeSyllable[7].push(word);
+          word = {writtenWord:"undresses",type:"nounLinkingSecondSingular",syllables:3,style:"all"};
+          threeSyllable[7].push(word);
+          word = {writtenWord:"unbuttons",type:"nounLinkingSecondSingular",syllables:3,style:"all"};
           threeSyllable[7].push(word);
           word = {writtenWord:"laced with a",type:"nounLinkingSecondSingular",syllables:3,style:"all"};
           threeSyllable[7].push(word);
           word = {writtenWord:"complements",type:"nounLinkingSecondSingular",syllables:3,style:"all"};
+          threeSyllable[7].push(word);
+          word = {writtenWord:"kneels before",type:"nounLinkingSecondSingular",syllables:3,style:"all"};
           threeSyllable[7].push(word);
           //4 syllables
           word = {writtenWord:"says hello to",type:"nounLinkingSecondSingular",syllables:4,style:"all"};
@@ -3884,8 +4143,16 @@ function getRandomPoem(isMobile) {
           //1 syllables
           word = {writtenWord:"and",type:"nounLinkingSecondPlural",syllables:1,style:"all"};
           oneSyllable[8].push(word);
+          word = {writtenWord:"touch",type:"nounLinkingSecondPlural",syllables:1,style:"all"};
+          oneSyllable[8].push(word);
+          word = {writtenWord:"kiss",type:"nounLinkingSecondPlural",syllables:1,style:"all"};
+          oneSyllable[8].push(word);
           //2 syllables
           word = {writtenWord:"crowned with",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
+          twoSyllable[8].push(word);
+          word = {writtenWord:"undress",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
+          twoSyllable[8].push(word);
+          word = {writtenWord:"snuggle",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
           twoSyllable[8].push(word);
           word = {writtenWord:"laced with",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
           twoSyllable[8].push(word);
@@ -3901,10 +4168,16 @@ function getRandomPoem(isMobile) {
           twoSyllable[8].push(word);
           word = {writtenWord:"pair with",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
           twoSyllable[8].push(word);
+          word = {writtenWord:"long for",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
+          twoSyllable[8].push(word);
           word = {writtenWord:"attract",type:"nounLinkingSecondPlural",syllables:2,style:"all"};
           twoSyllable[8].push(word);
           //3 syllables
           word = {writtenWord:"complement",type:"nounLinkingSecondPlural",syllables:3,style:"all"};
+          threeSyllable[8].push(word);
+          word = {writtenWord:"unbutton",type:"nounLinkingSecondPlural",syllables:3,style:"all"};
+          threeSyllable[8].push(word);
+          word = {writtenWord:"kneel before",type:"nounLinkingSecondPlural",syllables:3,style:"all"};
           threeSyllable[8].push(word);
           word = {writtenWord:"with a hint of",type:"nounLinkingSecondPlural",syllables:3,style:"all"};
           threeSyllable[8].push(word);
