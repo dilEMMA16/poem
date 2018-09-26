@@ -1231,8 +1231,6 @@ function getRandomPoem(isMobile) {
           twoSyllable[3].push(word);
           word = {writtenWord:"sunlight",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
-          word = {writtenWord:"gypsy",type:"nounSingular",syllables:2,style:"all"};
-          twoSyllable[3].push(word);
           word = {writtenWord:"drive-in",type:"nounSingular",syllables:2,style:"all"};
           twoSyllable[3].push(word);
           word = {writtenWord:"tulip",type:"nounSingular",syllables:2,style:"all"};
@@ -2599,8 +2597,6 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"yentas",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"epochs",type:"nounPlural",syllables:2,style:"all"};
-          twoSyllable[4].push(word);
-          word = {writtenWord:"gypsies",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
           word = {writtenWord:"bedlams",type:"nounPlural",syllables:2,style:"all"};
           twoSyllable[4].push(word);
