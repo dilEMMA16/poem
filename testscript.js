@@ -3280,7 +3280,7 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"botanies",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"avenues",type:"nounPlural",syllables:3,style:"all"};
-          threeSyllable[4].push(word
+          threeSyllable[4].push(word);
           word = {writtenWord:"boulevards",type:"nounPlural",syllables:3,style:"all"};
           threeSyllable[4].push(word);
           word = {writtenWord:"monologues",type:"nounPlural",syllables:3,style:"all"};
