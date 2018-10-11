@@ -180,8 +180,8 @@ function getRandomPoem(isMobile) {
   //populate with words
   populateDictionary(oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
 
-  //decide how many lines (1 - 8)
-  let numberOfLines = Utilities.getRandomInteger(1, 8);
+  //decide how many lines (1 - 6)
+  let numberOfLines = Utilities.getRandomInteger(1, 6);
   let poem = "";
   //for number of lines
   for (let i = 0; i < numberOfLines; i++) {
@@ -657,7 +657,7 @@ function getRandomPoem(isMobile) {
           threeSyllable[0].push(word);
           word = {writtenWord:"encases",type:"verbSingular",syllables:3,style:"all"};
           threeSyllable[0].push(word);
-          word = {writtenWord:"tessallates",type:"verbSingular",syllables:3,style:"all"};
+          word = {writtenWord:"tessellates",type:"verbSingular",syllables:3,style:"all"};
           threeSyllable[0].push(word);
           word = {writtenWord:"bombinates",type:"verbSingular",syllables:3,style:"all"};
           threeSyllable[0].push(word);
@@ -1132,7 +1132,7 @@ function getRandomPoem(isMobile) {
           threeSyllable[1].push(word);
           word = {writtenWord:"envelope",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
-          word = {writtenWord:"tessallate",type:"verbPlural",syllables:3,style:"all"};
+          word = {writtenWord:"tessellate",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
           word = {writtenWord:"bombinate",type:"verbPlural",syllables:3,style:"all"};
           threeSyllable[1].push(word);
@@ -5060,7 +5060,7 @@ function getRandomPoem(isMobile) {
           word = {writtenWord:"tango with",type:"nounLinkingSecondPlural",syllables:3,style:"all"};
           threeSyllable[8].push(word);
           //4 syllables
-          word = {writtenWord:"tessallate with",type:"nounLinkingSecondPlural",syllables:4,style:"all"};
+          word = {writtenWord:"tessellate with",type:"nounLinkingSecondPlural",syllables:4,style:"all"};
           fourSyllable[8].push(word);
           word = {writtenWord:"fiesta with",type:"nounLinkingSecondPlural",syllables:4,style:"all"};
           fourSyllable[8].push(word);
