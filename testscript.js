@@ -180,8 +180,8 @@ function getRandomPoem(isMobile) {
   //populate with words
   populateDictionary(oneSyllable, twoSyllable,threeSyllable, fourSyllable, fiveSyllable);
 
-  //decide how many lines (1 - 6)
-  let numberOfLines = Utilities.getRandomInteger(1, 6);
+  //decide how many lines (1 - 5)
+  let numberOfLines = Utilities.getRandomInteger(1, 5);
   let poem = "";
   //for number of lines
   for (let i = 0; i < numberOfLines; i++) {
