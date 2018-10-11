@@ -51,6 +51,11 @@
                 filter: brightness(110%);
             }
 
+            h1 {
+              font-family: 'Cutive Mono';
+              font-size: 62px;
+              color: #bab9af;
+            }
 
 
         .main {
@@ -72,6 +77,12 @@
             /* Full height */
             height: 100%;
         }
+
+                h2 {
+                  font-family: 'Cutive Mono';
+                  font-size: 42px;
+                  color: #bab9af;
+                }
 
         #sidebar.offpage {
             margin-left: -250px;
@@ -117,7 +128,16 @@
         <div class="main"  style="width:100% !important;">
         <button class="w3-button w3-xlarge menuButton2"  id=threeLineButton style="background-color:#638257; height: 70px; margin-left: 15px; z-index: 5; position: fixed;"onclick="w3_open()">☰</button>
         <div class="container-fluid" onclick="w3_close()" style = "height:100%;width:100%;line-height:2;">
-
+          <div class="row" style="width:100vw !important;padding:25px;background-color:#2f4052;">
+            <div class="col-sm-1" style="padding:0px;">
+            </div>
+            <div class="col-sm-10" class="align-middle" style="padding-top:15px;text-align:center;">
+              <h1 id=wordCount ></h1>
+              <h2>words</h2>
+            </div>
+            <div class="col-sm-1" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
+            </div>
+          </div>
           <div class="row" style="width:100vw !important;padding:25px;background-color:#3f556d;">
             <div class="col-sm-1" style="padding:0px;">
             </div>
