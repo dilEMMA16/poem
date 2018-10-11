@@ -39,17 +39,17 @@
             text-align: center;
         }
 
-            .sidenav a {
-                padding: 6px 22px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #bab9af;
-                display: block;
-            }
+        .sidenavlink {
+            padding: 6px 22px !important;
+            text-decoration: none  !important;
+            font-size: 25px  !important;
+            color: #bab9af  !important;
+            display: block  !important;
+        }
 
-                .sidenav a:hover {
-                    filter: brightness(110%);
-                }
+            .sidenavlink:hover {
+                filter: brightness(110%);
+            }
 
 
         .main {
@@ -70,6 +70,18 @@
 
             /* Full height */
             height: 100%;
+        }
+
+        h1 {
+          font-family: 'Cutive Mono';
+          font-size: 62px;
+          color: #bab9af;
+        }
+
+        h2 {
+          font-family: 'Cutive Mono';
+          font-size: 42px;
+          color: #bab9af;
         }
 
         #sidebar.offpage {
@@ -99,39 +111,84 @@
         <!-- Sidebar -->
         <div id="sidenav" class="w3-sidebar w3-bar-block w3-border-right sidenav" style="display:none;height: 100vh;text-align: center;">
           <button onclick="w3_close()" class="w3-bar-item w3-large menuButton2" style="text-align:right;background-color:#638257; margin:0;">Close &times;</button>
-                    <img src="imgs/logo3.png" style="width:100%;padding:20px;">
-                    <br><br>
-                    <a href="index.html" >create</a><br>
-                    <a href="random.html">random</a><br>
+<a href="index.html"><img src="imgs/logo3.png" style="width:100%;padding:20px;"> </a>                    <br><br>
+                    <a href="index.html" class=sidenavlink>create</a><br>
+                    <a href="random.html"class=sidenavlink>random</a><br>
 
-                    <a href="words.html">words</a><br>
+                    <a href="words.html"class=sidenavlink>words</a><br>
 
-                    <a href="how.html" class="active">how it works</a><br>
+                    <a href="how.html" class="active sidenavlink">how it works</a><br>
 
-                    <a href="contact.html">contact</a><br>
+
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div class="main" style="background-image:url('imgs/POETRY7.png'); height: 100vh;background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */">
-        <button class="w3-button w3-xlarge menuButton2"  id=threeLineButton style="background-color:#638257; height: 70px; margin-left: 15px; z-index: 5; position: absolute;"onclick="w3_open()">☰</button>
-        <div class="container-fluid" style = "height:100%;">
+        <div class="main"  style="background-color:#2d3b27;min-height:100vh;">
+        <button class="w3-button w3-xlarge menuButton2"  id=threeLineButton style="background-color:#638257; height: 70px; margin-left: 15px; z-index: 5; position: fixed;"onclick="w3_open()">☰</button>
+        <div class="container-fluid" onclick="w3_close()" style = "height:100%;">
 
 
 
-          <div class="row" style="width:80vw !important;">
-            <div class="col-sm-3" style="padding:0px;">
+          <div class="row" style="width:100vw !important;">
+            <div class="col-sm-2" style="padding:0px;">
             </div>
-            <div class="col-sm-6" class="align-middle" style="padding-top:25vh;text-align:center;">
-              <p id="poem" style="height:200px;"></p><br><br><br>
-              <button type="button" class="w3-button menuButton" onclick="writeHaiku(false)">dame una poema</button>
+            <div class="col-sm-8" class="align-middle" style="padding-top:20vh;padding-bottom:20vh;text-align:center;">
+
+              <h1>poetry</h1>
+              <h2>the mixology of science & language </h2>
+
             </div>
-            <div class="col-sm-3" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
+            <div class="col-sm-2" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
             </div>
           </div>
+
+          <div class="row" style="width:100vw !important; background-color:#3f556d; padding: 35px 0px;">
+            <div class="col-sm-2" style="padding:0px;">
+            </div>
+            <div class="col-sm-8" class="align-middle" style="text-align:center;">
+              <h2>conception</h2>
+              poetree grew from the idea that the sciences and language were not as separate of concepts as one may believe
+            </div>
+            <div class="col-sm-2" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
+            </div>
+          </div>
+
+        <div class="row" style="width:100vw !important; background-color:#2f4052; padding: 35px 0px;">
+          <div class="col-sm-2" style="padding:0px;">
+          </div>
+          <div class="col-sm-8" class="align-middle" style="text-align:center;">
+            <h2>how it works</h2>
+            the site uses a hand-curated assortment of words to randomly craft traditional haikus (5-7-5 syllable format) or miscellaneous poems based on structural templates
+            <br><br>
+            ... think mad libs gone geeky
+            <br><br>
+            ... or the embodiment of the 'A' in STEAM
+          </div>
+          <div class="col-sm-2" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
+          </div>
         </div>
+
+        <div class="row" style="width:100vw !important;">
+          <div class="col-sm-2" style="padding:0px;">
+          </div>
+          <div class="col-sm-8" class="align-middle" style="padding-top:20vh;padding-bottom:20vh;text-align:center;">
+
+            <h1>required tools</h1>
+            <h2>html, css, javascript, time, cup of tea</h2>
+
+          </div>
+          <div class="col-sm-2" style="padding-left: 0px;  padding-right: 0px;padding-bottom:5px;">
+          </div>
+        </div>
+
+      </div>
+
+
+        </div>
+
+
+
 
 
         </div>
